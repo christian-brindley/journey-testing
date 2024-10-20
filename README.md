@@ -8,7 +8,15 @@ You may have arrived here via the [related blog article](https://medium.com/@chr
 
 ## Sample journey
 
-The sample consists of a main login journey, with an inner journey applying MFA for unregistered devices. This uses simple MFA via email using a randomly generated one time password.
+The sample consists of a main login journey, with an inner journey applying MFA for unregistered devices. This uses simple MFA via email using a randomly generated one time password, with the option to remember the device for future logins.
+
+### Outer journey
+
+![Login Journey](/images/LoginJourney.png)
+
+### Inner MFA journey
+
+![Inner Journey - MFA](/images/LoginJourneyMFA.png)
 
 ## Sample Postman collection
 
