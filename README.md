@@ -18,24 +18,24 @@ The sample collection includes the following folders:
 - <b>Cleanup</b> removes the test user.
 - <b>Logs</b> can be used to pull logs for the latest transaction ID used by journey tests
 
-  ## Setup
+## Setup
 
-  ### Import the sample journey
+### Import the sample journey
 
-  Use the AIC administration console to import the sample journey from the [journeys folder](/journeys). You should now see two new journeys in your tenant configuration
+Use the AIC administration console to import the sample journey from the [journeys folder](/journeys). You should now see two new journeys in your tenant configuration
 
-  - Login Demo
-  - Login Demo - MFA
+- Login Demo
+- Login Demo - MFA
 
-  ### Import the Postman collection and environment
+### Import the Postman collection and environment
 
-  Start up Postman and import the collection and environment from the [collection folder](/collection).
+Start up Postman and import the collection and environment from the [collection folder](/collection).
 
-  The collection uses the [mailslurp service](mailslurp.com) to receive MFA emails over REST, but may be adapted to use any REST compliant email platform.
+The collection uses the [mailslurp service](mailslurp.com) to receive MFA emails over REST, but may be adapted to use any REST compliant email platform.
 
-  ## Configure the Postman environment
+## Configure the Postman environment
 
-  Set the variables within the Postman environment as follows:
+Set the variables within the Postman environment as follows:
 
 | Variable                 | Value                                                                                                                   | Example                                    |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
