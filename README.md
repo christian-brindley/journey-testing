@@ -29,7 +29,7 @@ Use the AIC administration console to import the sample journey from the [journe
 
 ### Import the Postman collection and environment
 
-Start up Postman and import the collection and environment from the [collection folder](/collection).
+Start up Postman and import the collection and environment from the [postman folder](/postman).
 
 The collection uses the [mailslurp service](mailslurp.com) to receive MFA emails over REST, but may be adapted to use any REST compliant email platform.
 
