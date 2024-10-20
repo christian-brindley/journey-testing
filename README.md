@@ -55,6 +55,10 @@ Set the variables within the Postman environment as follows:
 | serviceAccountId         | The service account ID downloaded from the AIC administration console                                                   |                                            |
 | serviceAccountPrivateKey | The full service account private key JWT downloaded from the AIC administration console                                 |                                            |
 
+## Allow cookie access
+
+Some of the Postman requests require access to cookies - for example to clear cookies at the start of a journey, and check cookies at the end. In order to allow this, the Postman cookie settings need to be updated to allow access to cookies for the domain name of your AIC tenant. Refer to the [Postman documentation](https://learning.postman.com/docs/sending-requests/response-data/cookies/#use-the-cookie-manager) for details.
+
 ## Run the tests
 
 Run the collection folders in the order in which they appear in the collection to
