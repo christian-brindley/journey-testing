@@ -37,6 +37,16 @@ Use the AIC administration console to import the sample journey from the [journe
 - Login Demo
 - Login Demo - MFA
 
+### Create an email template for MFA
+
+The Postman request for retrieving the OTP email expects the OTP at the beginning of the email subject line.
+
+[Create an email template](https://backstage.forgerock.com/docs/idcloud/latest/tenants/email-templates.html#create-a-new-email-template) called `otp` for use by the inner MFA journey. The template should have the email subject set as follows
+
+```
+{{object.otp}} is your verification code
+```
+
 ### Import the Postman collection and environment
 
 Start up Postman and import the collection and environment from the [postman folder](/postman).
