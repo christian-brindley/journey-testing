@@ -1,78 +1,58 @@
 {
   "meta": {
-    "origin": "https://openam-brindley.forgeblocks.com/platform/?realm=alpha#/journeys/Login%20Demo",
+    "origin": "https://openam-brindley.forgeblocks.com/platform/?realm=alpha#/journeys",
     "exportedBy": "christian.brindley@forgerock.com",
-    "exportDate": "2024-10-20T08:40:38.638Z",
+    "exportDate": "2024-10-21T17:52:50.652Z",
     "exportTool": "platform-admin ui tree export",
     "exportToolVersion": "1.0",
     "treesSelectedForExport": [
-      "Login Demo"
+      "Login"
     ],
     "innerTreesIncluded": [
-      "Login Demo - MFA"
+      "Login - MFA"
     ]
   },
   "trees": {
-    "Login Demo - MFA": {
+    "Login - MFA": {
       "tree": {
-        "_id": "Login Demo - MFA",
-        "_rev": "1039431179",
+        "_id": "Login - MFA",
+        "_rev": "-1755134061",
         "identityResource": "managed/alpha_user",
         "uiConfig": {
           "categories": "[]"
         },
-        "entryNodeId": "50fa7ad4-fd2b-431b-8ec0-a8ea3aa2658d",
+        "entryNodeId": "05bb1d30-1a3d-4453-865f-ece400addb84",
         "innerTreeOnly": true,
         "nodes": {
-          "090f7750-933c-4a39-8e40-b825301459f4": {
+          "05bb1d30-1a3d-4453-865f-ece400addb84": {
             "connections": {
-              "error": "e301438c-0bd0-429c-ab0c-66126501069a",
-              "success": "2cb76c3b-1d47-4de6-b2c2-c1a0753565b4"
-            },
-            "displayName": "Send Verification Email",
-            "nodeType": "ScriptedDecisionNode",
-            "x": 613.1840057373047,
-            "y": 189.25
-          },
-          "2cb76c3b-1d47-4de6-b2c2-c1a0753565b4": {
-            "connections": {
-              "false": "fa667c14-7009-49c8-8cdb-08e06c2c3e69",
-              "true": "45da95d1-b6c1-43c3-899c-3e19600d3fe1"
-            },
-            "displayName": "Collect OTP",
-            "nodeType": "PageNode",
-            "x": 846.6284484863281,
-            "y": 193.25
-          },
-          "45da95d1-b6c1-43c3-899c-3e19600d3fe1": {
-            "connections": {
-              "false": "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
-              "true": "8e2ea344-2bdc-40a2-ae01-a28562c545a1"
-            },
-            "displayName": "Remember Me",
-            "nodeType": "PageNode",
-            "x": 1082.3333435058594,
-            "y": 192.25
-          },
-          "50fa7ad4-fd2b-431b-8ec0-a8ea3aa2658d": {
-            "connections": {
-              "true": "5a6a6378-265d-48ce-8635-75e3f389d832"
+              "true": "50762e08-e72b-4f5e-8d1d-3637a8dcfe66"
             },
             "displayName": "MFA Warning",
             "nodeType": "PageNode",
             "x": 208,
             "y": 187.02777862548828
           },
-          "5a6a6378-265d-48ce-8635-75e3f389d832": {
+          "50762e08-e72b-4f5e-8d1d-3637a8dcfe66": {
             "connections": {
-              "outcome": "090f7750-933c-4a39-8e40-b825301459f4"
+              "outcome": "f3ccbe16-5ed8-4d18-94b7-fc71161d707e"
             },
             "displayName": "Generate OTP",
             "nodeType": "OneTimePasswordGeneratorNode",
             "x": 415.517333984375,
             "y": 196.25
           },
-          "8e2ea344-2bdc-40a2-ae01-a28562c545a1": {
+          "5b734c01-3185-4d86-a729-a5e073420258": {
+            "connections": {
+              "false": "ff535a86-6667-4f0f-9ee9-a50cfc6ac36a",
+              "true": "ee1c4377-7006-41c7-984d-463532453cb6"
+            },
+            "displayName": "Collect OTP",
+            "nodeType": "PageNode",
+            "x": 846.6284484863281,
+            "y": 193.25
+          },
+          "792996c1-ab0e-4416-a7de-e372bd55dfc9": {
             "connections": {
               "outcome": "70e691a5-1e33-4ac3-a356-e7b6d60d92e0"
             },
@@ -81,10 +61,30 @@
             "x": 1300,
             "y": 190.25
           },
-          "fa667c14-7009-49c8-8cdb-08e06c2c3e69": {
+          "ee1c4377-7006-41c7-984d-463532453cb6": {
+            "connections": {
+              "false": "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+              "true": "792996c1-ab0e-4416-a7de-e372bd55dfc9"
+            },
+            "displayName": "Remember Me",
+            "nodeType": "PageNode",
+            "x": 1082.3333435058594,
+            "y": 192.25
+          },
+          "f3ccbe16-5ed8-4d18-94b7-fc71161d707e": {
+            "connections": {
+              "error": "e301438c-0bd0-429c-ab0c-66126501069a",
+              "success": "5b734c01-3185-4d86-a729-a5e073420258"
+            },
+            "displayName": "Send Verification Email",
+            "nodeType": "ScriptedDecisionNode",
+            "x": 613.1840057373047,
+            "y": 189.25
+          },
+          "ff535a86-6667-4f0f-9ee9-a50cfc6ac36a": {
             "connections": {
               "Reject": "e301438c-0bd0-429c-ab0c-66126501069a",
-              "Retry": "2cb76c3b-1d47-4de6-b2c2-c1a0753565b4"
+              "Retry": "5b734c01-3185-4d86-a729-a5e073420258"
             },
             "displayName": "Retry OTP",
             "nodeType": "RetryLimitDecisionNode",
@@ -110,9 +110,126 @@
         "enabled": true
       },
       "nodes": {
-        "090f7750-933c-4a39-8e40-b825301459f4": {
-          "_id": "090f7750-933c-4a39-8e40-b825301459f4",
-          "_rev": "1574286147",
+        "05bb1d30-1a3d-4453-865f-ece400addb84": {
+          "_id": "05bb1d30-1a3d-4453-865f-ece400addb84",
+          "_rev": "937928312",
+          "nodes": [
+            {
+              "_id": "69c97245-ec4f-4349-8bff-4fe45fe70ae4",
+              "nodeType": "ScriptedDecisionNode",
+              "displayName": "Next"
+            }
+          ],
+          "pageDescription": {},
+          "stage": "mfaWarning",
+          "pageHeader": {},
+          "_type": {
+            "_id": "PageNode",
+            "name": "Page Node",
+            "collection": true
+          },
+          "_outcomes": [
+            {
+              "id": "true",
+              "displayName": "true"
+            }
+          ]
+        },
+        "50762e08-e72b-4f5e-8d1d-3637a8dcfe66": {
+          "_id": "50762e08-e72b-4f5e-8d1d-3637a8dcfe66",
+          "_rev": "1098962411",
+          "length": 6,
+          "_type": {
+            "_id": "OneTimePasswordGeneratorNode",
+            "name": "HOTP Generator",
+            "collection": true
+          },
+          "_outcomes": [
+            {
+              "id": "outcome",
+              "displayName": "Outcome"
+            }
+          ]
+        },
+        "5b734c01-3185-4d86-a729-a5e073420258": {
+          "_id": "5b734c01-3185-4d86-a729-a5e073420258",
+          "_rev": "364739230",
+          "nodes": [
+            {
+              "_id": "5df49c00-6dd7-4de7-a68b-4a9f1f1a7728",
+              "nodeType": "OneTimePasswordCollectorDecisionNode",
+              "displayName": "Verify OTP"
+            }
+          ],
+          "pageDescription": {},
+          "stage": "collectEmailOtp",
+          "pageHeader": {},
+          "_type": {
+            "_id": "PageNode",
+            "name": "Page Node",
+            "collection": true
+          },
+          "_outcomes": [
+            {
+              "id": "true",
+              "displayName": "True"
+            },
+            {
+              "id": "false",
+              "displayName": "False"
+            }
+          ]
+        },
+        "792996c1-ab0e-4416-a7de-e372bd55dfc9": {
+          "_id": "792996c1-ab0e-4416-a7de-e372bd55dfc9",
+          "_rev": "-1099176012",
+          "maxSavedProfiles": 5,
+          "saveDeviceMetadata": true,
+          "saveDeviceLocation": true,
+          "_type": {
+            "_id": "DeviceSaveNode",
+            "name": "Device Profile Save",
+            "collection": true
+          },
+          "_outcomes": [
+            {
+              "id": "outcome",
+              "displayName": "Outcome"
+            }
+          ]
+        },
+        "ee1c4377-7006-41c7-984d-463532453cb6": {
+          "_id": "ee1c4377-7006-41c7-984d-463532453cb6",
+          "_rev": "-1964089830",
+          "nodes": [
+            {
+              "_id": "f4b6cdd7-df42-4d94-9134-483893cdf3ef",
+              "nodeType": "MessageNode",
+              "displayName": "Remember"
+            }
+          ],
+          "pageDescription": {},
+          "stage": "rememberMe",
+          "pageHeader": {},
+          "_type": {
+            "_id": "PageNode",
+            "name": "Page Node",
+            "collection": true
+          },
+          "_outcomes": [
+            {
+              "id": "true",
+              "displayName": "True"
+            },
+            {
+              "id": "false",
+              "displayName": "False"
+            }
+          ]
+        },
+        "f3ccbe16-5ed8-4d18-94b7-fc71161d707e": {
+          "_id": "f3ccbe16-5ed8-4d18-94b7-fc71161d707e",
+          "_rev": "974802392",
           "script": "10c8e0f5-84ae-4035-9d10-04deb5258e15",
           "outcomes": [
             "success",
@@ -140,127 +257,9 @@
             }
           ]
         },
-        "2cb76c3b-1d47-4de6-b2c2-c1a0753565b4": {
-          "_id": "2cb76c3b-1d47-4de6-b2c2-c1a0753565b4",
-          "_rev": "1595643962",
-          "nodes": [
-            {
-              "_id": "ca180f07-8321-4409-b747-a8112d2ea463",
-              "nodeType": "OneTimePasswordCollectorDecisionNode",
-              "displayName": "Verify OTP"
-            }
-          ],
-          "pageDescription": {},
-          "stage": "collectEmailOtp",
-          "pageHeader": {},
-          "_type": {
-            "_id": "PageNode",
-            "name": "Page Node",
-            "collection": true
-          },
-          "_outcomes": [
-            {
-              "id": "true",
-              "displayName": "True"
-            },
-            {
-              "id": "false",
-              "displayName": "False"
-            }
-          ]
-        },
-        "45da95d1-b6c1-43c3-899c-3e19600d3fe1": {
-          "_id": "45da95d1-b6c1-43c3-899c-3e19600d3fe1",
-          "_rev": "-2104264976",
-          "nodes": [
-            {
-              "_id": "ad4fc05c-e7b4-4444-a339-fff9ef5da453",
-              "nodeType": "MessageNode",
-              "displayName": "Remember"
-            }
-          ],
-          "pageDescription": {},
-          "stage": "rememberMe",
-          "pageHeader": {},
-          "_type": {
-            "_id": "PageNode",
-            "name": "Page Node",
-            "collection": true
-          },
-          "_outcomes": [
-            {
-              "id": "true",
-              "displayName": "True"
-            },
-            {
-              "id": "false",
-              "displayName": "False"
-            }
-          ]
-        },
-        "50fa7ad4-fd2b-431b-8ec0-a8ea3aa2658d": {
-          "_id": "50fa7ad4-fd2b-431b-8ec0-a8ea3aa2658d",
-          "_rev": "-1242070960",
-          "nodes": [
-            {
-              "_id": "5b2248cd-446d-45c3-84f8-7528c09104d3",
-              "nodeType": "ScriptedDecisionNode",
-              "displayName": "Next"
-            }
-          ],
-          "pageDescription": {},
-          "stage": "mfaWarning",
-          "pageHeader": {},
-          "_type": {
-            "_id": "PageNode",
-            "name": "Page Node",
-            "collection": true
-          },
-          "_outcomes": [
-            {
-              "id": "true",
-              "displayName": "true"
-            }
-          ]
-        },
-        "5a6a6378-265d-48ce-8635-75e3f389d832": {
-          "_id": "5a6a6378-265d-48ce-8635-75e3f389d832",
-          "_rev": "-1363562062",
-          "length": 6,
-          "_type": {
-            "_id": "OneTimePasswordGeneratorNode",
-            "name": "HOTP Generator",
-            "collection": true
-          },
-          "_outcomes": [
-            {
-              "id": "outcome",
-              "displayName": "Outcome"
-            }
-          ]
-        },
-        "8e2ea344-2bdc-40a2-ae01-a28562c545a1": {
-          "_id": "8e2ea344-2bdc-40a2-ae01-a28562c545a1",
-          "_rev": "-1277844632",
-          "maxSavedProfiles": 5,
-          "saveDeviceMetadata": true,
-          "saveDeviceLocation": true,
-          "variableName": "",
-          "_type": {
-            "_id": "DeviceSaveNode",
-            "name": "Device Profile Save",
-            "collection": true
-          },
-          "_outcomes": [
-            {
-              "id": "outcome",
-              "displayName": "Outcome"
-            }
-          ]
-        },
-        "fa667c14-7009-49c8-8cdb-08e06c2c3e69": {
-          "_id": "fa667c14-7009-49c8-8cdb-08e06c2c3e69",
-          "_rev": "483317254",
+        "ff535a86-6667-4f0f-9ee9-a50cfc6ac36a": {
+          "_id": "ff535a86-6667-4f0f-9ee9-a50cfc6ac36a",
+          "_rev": "-241480380",
           "incrementUserAttributeOnFailure": true,
           "retryLimit": 3,
           "_type": {
@@ -281,9 +280,34 @@
         }
       },
       "innerNodes": {
-        "ca180f07-8321-4409-b747-a8112d2ea463": {
-          "_id": "ca180f07-8321-4409-b747-a8112d2ea463",
-          "_rev": "-1391451672",
+        "69c97245-ec4f-4349-8bff-4fe45fe70ae4": {
+          "_id": "69c97245-ec4f-4349-8bff-4fe45fe70ae4",
+          "_rev": "314499023",
+          "script": "7fe369b1-8c96-4d26-944c-5b608488187a",
+          "outcomes": [
+            "true"
+          ],
+          "outputs": [
+            "*"
+          ],
+          "inputs": [
+            "*"
+          ],
+          "_type": {
+            "_id": "ScriptedDecisionNode",
+            "name": "Scripted Decision",
+            "collection": true
+          },
+          "_outcomes": [
+            {
+              "id": "true",
+              "displayName": "true"
+            }
+          ]
+        },
+        "5df49c00-6dd7-4de7-a68b-4a9f1f1a7728": {
+          "_id": "5df49c00-6dd7-4de7-a68b-4a9f1f1a7728",
+          "_rev": "1740638365",
           "passwordExpiryTime": 5,
           "_type": {
             "_id": "OneTimePasswordCollectorDecisionNode",
@@ -301,9 +325,9 @@
             }
           ]
         },
-        "ad4fc05c-e7b4-4444-a339-fff9ef5da453": {
-          "_id": "ad4fc05c-e7b4-4444-a339-fff9ef5da453",
-          "_rev": "477698224",
+        "f4b6cdd7-df42-4d94-9134-483893cdf3ef": {
+          "_id": "f4b6cdd7-df42-4d94-9134-483893cdf3ef",
+          "_rev": "-1417041442",
           "messageYes": {
             "en": "Yes"
           },
@@ -328,31 +352,6 @@
               "displayName": "False"
             }
           ]
-        },
-        "5b2248cd-446d-45c3-84f8-7528c09104d3": {
-          "_id": "5b2248cd-446d-45c3-84f8-7528c09104d3",
-          "_rev": "1921297679",
-          "script": "7fe369b1-8c96-4d26-944c-5b608488187a",
-          "outcomes": [
-            "true"
-          ],
-          "outputs": [
-            "*"
-          ],
-          "inputs": [
-            "*"
-          ],
-          "_type": {
-            "_id": "ScriptedDecisionNode",
-            "name": "Scripted Decision",
-            "collection": true
-          },
-          "_outcomes": [
-            {
-              "id": "true",
-              "displayName": "true"
-            }
-          ]
         }
       },
       "scripts": {
@@ -360,7 +359,7 @@
           "_id": "10c8e0f5-84ae-4035-9d10-04deb5258e15",
           "name": "demo-send-otp-email",
           "description": "null",
-          "script": "\"/*\\n * The contents of this file are subject to the terms of the Common Development and\\n * Distribution License (the License). You may not use this file except in compliance with the\\n * License.\\n *\\n * You can obtain a copy of the License at legal/LICENSE.md. See the License for the\\n * specific language governing permission and limitations under the License.\\n */\\n\\nvar nodeConfig = {\\n  otpStateVariable: \\\"oneTimePassword\\\",\\n  templateId: \\\"otp\\\",\\n  userObject: \\\"alpha_user\\\",\\n};\\n\\nvar nodeOutcomes = {\\n  SUCCESS: \\\"success\\\",\\n  ERROR: \\\"error\\\",\\n};\\n\\n(function () {\\n  try {\\n    var uuid = nodeState.get(\\\"username\\\");\\n    if (!uuid) {\\n      logger.error(\\\"No uuid in shared state\\\");\\n      action.goTo(nodeOutcomes.ERROR);\\n      return;\\n    }\\n\\n    var userDetails = openidm.read(`managed/${nodeConfig.userObject}/${uuid}`);\\n    if (!userDetails) {\\n      logger.error(\\\"No user found\\\");\\n      action.goTo(nodeOutcomes.ERROR);\\n      return;\\n    }\\n\\n    var emailAddress = userDetails.mail;\\n    if (!emailAddress) {\\n      logger.error(\\\"No email found\\\");\\n      action.goTo(nodeOutcomes.ERROR);\\n      return;\\n    }\\n\\n    var otp = nodeState.get(nodeConfig.otpStateVariable);\\n    if (!otp) {\\n      logger.error(\\\"No otp in shared state\\\");\\n      action.goTo(nodeOutcomes.ERROR);\\n      return;\\n    }\\n\\n    userDetails.otp = otp;\\n\\n    var emailParams = {\\n      to: emailAddress,\\n      type: \\\"text/html\\\",\\n      templateName: nodeConfig.templateId,\\n      object: userDetails,\\n    };\\n\\n    logger.debug(\\\"Sending OTP email to \\\" + emailAddress);\\n\\n    var result = openidm.action(\\\"external/email\\\", \\\"sendTemplate\\\", emailParams);\\n\\n    if (!result) {\\n      logger.error(\\\"Bad result from email service\\\");\\n      action.goTo(nodeOutcomes.ERROR);\\n      return;\\n    }\\n\\n    action.goTo(nodeOutcomes.SUCCESS);\\n  } catch (e) {\\n    logger.error(\\\"Exception \\\" + e);\\n    logger.debug(\\\"Stack trace \\\" + e.stack);\\n    action.goTo(nodeOutcomes.ERROR);\\n  }\\n})();\\n\"",
+          "script": "\"/**\\n * @file This script sends a templated HOTP to a user via the IDM's configured email service\\n * using the openidm binding in next-gen scripting\\n * NOTE - The use of SendGrid is not supported in Production and must be changed to your own email service\\n * Steps are here: https://backstage.forgerock.com/docs/idcloud/latest/tenants/email-provider.html#external_smtp_email_server\\n * @version 0.2.0\\n * @keywords email mail hotp sharedState transientState templateService\\n */\\n\\n/**\\n * Script configuration\\n*/\\n\\n// Uncomment to Initialise the logger called ds-node-logger-lib library script\\n// XLogger = require(\\\"ds-node-logger-lib\\\").XLogger;\\n// logger = new XLogger(this);\\n\\nvar config = {\\n    /**\\n     * @property {string} templateID - Identifier of email template\\n     * @property {string} idmEndpoint - IDM Endpoint used to send templated emails\\n     * @property {string} idmAction - IDM action executed against the idmEndpoint\\n     */\\n\\n    templateID: \\\"otp\\\",\\n    idmEndpoint: \\\"external/email\\\",\\n    idmAction: \\\"sendTemplate\\\"\\n};\\n\\n/**\\n * Node outcomes\\n*/\\nvar nodeOutcome = {\\n    PASS: \\\"sent\\\",\\n    FAIL: \\\"noMail\\\",\\n    ERROR: \\\"error\\\"\\n};\\n\\n/**\\n * Send email via the IDM Email Service openidm binding in next-gen scripting\\n * \\n * @param {string} hotp - HOTP retrieved from transientState\\n * @param {string} mail - mail attribute retrieved from the idRepository. Note if this is a registration journey acquire mail from sharedState\\n * @param {string} givenName - givenName attribute retrieved from the idRepository. Note if this is a registration journey acquire givenName from sharedState\\n */\\n\\nfunction sendMail(hotp, mail, givenName) {\\n    try {\\n        var params = new Object();\\n        params.templateName = config.templateID;\\n        params.to = mail;\\n        params.object = {\\n            \\\"givenName\\\": givenName,\\n            \\\"otp\\\": hotp\\n        };\\n        openidm.action(config.idmEndpoint, config.idmAction, params);\\n        logger.debug(\\\"Email sent successfully\\\");\\n        return nodeOutcome.PASS;\\n    }\\n    catch (e) {\\n        logger.error(\\\"Failed to call IDM Email endpoint using template. Exception is: \\\" + e);\\n        return nodeOutcome.ERROR;\\n    }\\n};\\n\\n/**\\n * Main function\\n */\\n\\n(function () {\\n    logger.debug(\\\"Node execution started\\\");\\n    var id;\\n    var hotp;\\n    var mail;\\n\\n    if (!(id = nodeState.get(\\\"_id\\\"))) {\\n        logger.error(\\\"Unable to retrieve Identity\\\");\\n        action.goTo(nodeOutcome.ERROR);\\n        return;\\n    } else {\\n        var identity = idRepository.getIdentity(id);\\n    }\\n\\n    if (!(hotp = nodeState.get(\\\"oneTimePassword\\\"))) {\\n        logger.error(\\\"Unable to retrieve HOTP from state\\\");\\n        action.goTo(nodeOutcome.ERROR);\\n        return;\\n    }\\n\\n    //If this is a registration journey adapt the following to try retrieve from nodeState\\n    if (!(mail = identity.getAttributeValues(\\\"mail\\\").toArray()[0])) {\\n        logger.error(\\\"Unable to retrieve mail attribute from the idRepository\\\");\\n        action.goTo(nodeOutcome.FAIL);\\n        return;\\n    }\\n\\n    //If this is a registration journey adapt the following to try retrieve from nodeState\\n    //Be sure to set givenName against the user\\n    if (!(givenName = identity.getAttributeValues(\\\"givenName\\\").toArray()[0])) {\\n        logger.error(\\\"Unable to retrieve givenName attribute from the idRepository\\\");\\n        action.goTo(nodeOutcome.FAIL);\\n        return;\\n    }\\n\\n    //Execute function to send mail\\n    outcome = sendMail(hotp, mail, givenName);\\n})();\"",
           "default": false,
           "language": "JAVASCRIPT",
           "context": "AUTHENTICATION_TREE_DECISION_NODE",
@@ -391,70 +390,51 @@
       "saml2Entities": {},
       "circlesOfTrust": {}
     },
-    "Login Demo": {
+    "Login": {
       "tree": {
-        "_id": "Login Demo",
-        "_rev": "344321146",
+        "_id": "Login",
+        "_rev": "-778133909",
         "identityResource": "managed/alpha_user",
         "uiConfig": {
           "categories": "[]"
         },
-        "entryNodeId": "7e8eaed7-5ff8-4b23-a7df-bd368fc5b886",
+        "entryNodeId": "11c44cdc-337c-4242-b84e-c066d360ea19",
         "innerTreeOnly": false,
         "nodes": {
-          "06850626-889f-49cc-8a8b-c3b5f0fa08ce": {
+          "11c44cdc-337c-4242-b84e-c066d360ea19": {
             "connections": {
-              "false": "e4b78126-8950-40e0-8dd7-55033cd4da83",
-              "true": "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
-              "unknownDevice": "e4b78126-8950-40e0-8dd7-55033cd4da83"
+              "outcome": "22f404bf-ff51-4e3b-97e6-cdae8d2e08a4"
             },
-            "displayName": "Device Match",
-            "nodeType": "DeviceMatchNode",
-            "x": 879.517333984375,
-            "y": 128.25
+            "displayName": "Userid Passsword",
+            "nodeType": "PageNode",
+            "x": 188,
+            "y": 118.71875
           },
-          "529a5885-3bdf-459b-bbac-0b6f19e6931d": {
+          "22f404bf-ff51-4e3b-97e6-cdae8d2e08a4": {
             "connections": {
               "CANCELLED": "e301438c-0bd0-429c-ab0c-66126501069a",
               "EXPIRED": "e301438c-0bd0-429c-ab0c-66126501069a",
-              "FALSE": "8de1eca9-dbf1-4d05-a9be-6e62f50d11d7",
+              "FALSE": "a3107dd4-3909-40e5-8f39-0e0112806693",
               "LOCKED": "e301438c-0bd0-429c-ab0c-66126501069a",
-              "TRUE": "5af46ab0-3587-4043-bb09-2d6b05391983"
+              "TRUE": "70e691a5-1e33-4ac3-a356-e7b6d60d92e0"
             },
             "displayName": "Identity Store Decision",
             "nodeType": "IdentityStoreDecisionNode",
             "x": 409,
             "y": 119.25
           },
-          "5af46ab0-3587-4043-bb09-2d6b05391983": {
+          "7c5e97d2-6cd3-469c-81eb-6ef2529fa12a": {
             "connections": {
-              "outcome": "06850626-889f-49cc-8a8b-c3b5f0fa08ce"
+              "false": "9bd69490-91eb-40b9-bce9-3eda1a52b849",
+              "true": "70e691a5-1e33-4ac3-a356-e7b6d60d92e0",
+              "unknownDevice": "9bd69490-91eb-40b9-bce9-3eda1a52b849"
             },
-            "displayName": "Device Profile Collector",
-            "nodeType": "DeviceProfileCollectorNode",
-            "x": 643.517333984375,
-            "y": 124.25
+            "displayName": "Device Match",
+            "nodeType": "DeviceMatchNode",
+            "x": 879.517333984375,
+            "y": 128.25
           },
-          "7e8eaed7-5ff8-4b23-a7df-bd368fc5b886": {
-            "connections": {
-              "outcome": "529a5885-3bdf-459b-bbac-0b6f19e6931d"
-            },
-            "displayName": "Userid Passsword",
-            "nodeType": "PageNode",
-            "x": 189,
-            "y": 118.71875
-          },
-          "8de1eca9-dbf1-4d05-a9be-6e62f50d11d7": {
-            "connections": {
-              "Reject": "e301438c-0bd0-429c-ab0c-66126501069a",
-              "Retry": "7e8eaed7-5ff8-4b23-a7df-bd368fc5b886"
-            },
-            "displayName": "Retry",
-            "nodeType": "RetryLimitDecisionNode",
-            "x": 424,
-            "y": 346.25
-          },
-          "e4b78126-8950-40e0-8dd7-55033cd4da83": {
+          "9bd69490-91eb-40b9-bce9-3eda1a52b849": {
             "connections": {
               "false": "e301438c-0bd0-429c-ab0c-66126501069a",
               "true": "70e691a5-1e33-4ac3-a356-e7b6d60d92e0"
@@ -463,6 +443,25 @@
             "nodeType": "InnerTreeEvaluatorNode",
             "x": 1103,
             "y": 211.01040649414062
+          },
+          "a3107dd4-3909-40e5-8f39-0e0112806693": {
+            "connections": {
+              "Reject": "e301438c-0bd0-429c-ab0c-66126501069a",
+              "Retry": "11c44cdc-337c-4242-b84e-c066d360ea19"
+            },
+            "displayName": "Retry",
+            "nodeType": "RetryLimitDecisionNode",
+            "x": 424,
+            "y": 346.25
+          },
+          "fd5a2143-2f00-44aa-bf0f-105e0ff44897": {
+            "connections": {
+              "outcome": "7c5e97d2-6cd3-469c-81eb-6ef2529fa12a"
+            },
+            "displayName": "Device Profile Collector",
+            "nodeType": "DeviceProfileCollectorNode",
+            "x": 643.517333984375,
+            "y": 124.25
           }
         },
         "staticNodes": {
@@ -483,36 +482,41 @@
         "enabled": true
       },
       "nodes": {
-        "06850626-889f-49cc-8a8b-c3b5f0fa08ce": {
-          "_id": "06850626-889f-49cc-8a8b-c3b5f0fa08ce",
-          "_rev": "1606928816",
-          "script": "01e1a3c0-038b-4c16-956a-6c9d89328cff",
-          "acceptableVariance": 0,
-          "expiration": 30,
-          "useScript": false,
+        "11c44cdc-337c-4242-b84e-c066d360ea19": {
+          "_id": "11c44cdc-337c-4242-b84e-c066d360ea19",
+          "_rev": "-1423516896",
+          "nodes": [
+            {
+              "_id": "c98b9e90-d0b3-4411-8e43-d34585452ed9",
+              "nodeType": "UsernameCollectorNode",
+              "displayName": "Username Collector"
+            },
+            {
+              "_id": "79b8d6f1-fba7-4c6d-9873-86b904600f35",
+              "nodeType": "PasswordCollectorNode",
+              "displayName": "Password Collector"
+            }
+          ],
+          "pageDescription": {},
+          "stage": "collectUserPass",
+          "pageHeader": {
+            "en": "&{esv.variable.1}"
+          },
           "_type": {
-            "_id": "DeviceMatchNode",
-            "name": "Device Match",
+            "_id": "PageNode",
+            "name": "Page Node",
             "collection": true
           },
           "_outcomes": [
             {
-              "id": "true",
-              "displayName": "True"
-            },
-            {
-              "id": "false",
-              "displayName": "False"
-            },
-            {
-              "id": "unknownDevice",
-              "displayName": "Unknown Device"
+              "id": "outcome",
+              "displayName": "Outcome"
             }
           ]
         },
-        "529a5885-3bdf-459b-bbac-0b6f19e6931d": {
-          "_id": "529a5885-3bdf-459b-bbac-0b6f19e6931d",
-          "_rev": "1964043539",
+        "22f404bf-ff51-4e3b-97e6-cdae8d2e08a4": {
+          "_id": "22f404bf-ff51-4e3b-97e6-cdae8d2e08a4",
+          "_rev": "547227717",
           "useUniversalIdForUsername": true,
           "minimumPasswordLength": 8,
           "mixedCaseForPasswordChangeMessages": false,
@@ -544,62 +548,56 @@
             }
           ]
         },
-        "5af46ab0-3587-4043-bb09-2d6b05391983": {
-          "_id": "5af46ab0-3587-4043-bb09-2d6b05391983",
-          "_rev": "606121292",
-          "deviceLocation": false,
-          "maximumSize": "3",
-          "deviceMetadata": true,
-          "message": {},
+        "7c5e97d2-6cd3-469c-81eb-6ef2529fa12a": {
+          "_id": "7c5e97d2-6cd3-469c-81eb-6ef2529fa12a",
+          "_rev": "509518830",
+          "script": "01e1a3c0-038b-4c16-956a-6c9d89328cff",
+          "acceptableVariance": 0,
+          "expiration": 30,
+          "useScript": false,
           "_type": {
-            "_id": "DeviceProfileCollectorNode",
-            "name": "Device Profile Collector",
+            "_id": "DeviceMatchNode",
+            "name": "Device Match",
             "collection": true
           },
           "_outcomes": [
             {
-              "id": "outcome",
-              "displayName": "Outcome"
-            }
-          ]
-        },
-        "7e8eaed7-5ff8-4b23-a7df-bd368fc5b886": {
-          "_id": "7e8eaed7-5ff8-4b23-a7df-bd368fc5b886",
-          "_rev": "-1945014090",
-          "nodes": [
-            {
-              "_id": "6674a543-5c06-4bda-b521-10f759e427fe",
-              "nodeType": "UsernameCollectorNode",
-              "displayName": "Username Collector"
+              "id": "true",
+              "displayName": "True"
             },
             {
-              "_id": "2a9fe13a-a05a-462e-a0d5-70c2271b446b",
-              "nodeType": "PasswordCollectorNode",
-              "displayName": "Password Collector"
+              "id": "false",
+              "displayName": "False"
+            },
+            {
+              "id": "unknownDevice",
+              "displayName": "Unknown Device"
             }
-          ],
-          "pageDescription": {
-            "en": "Please enter your userid and password."
-          },
-          "stage": "collectUserPass",
-          "pageHeader": {
-            "en": "Welcome"
-          },
+          ]
+        },
+        "9bd69490-91eb-40b9-bce9-3eda1a52b849": {
+          "_id": "9bd69490-91eb-40b9-bce9-3eda1a52b849",
+          "_rev": "1703290162",
+          "tree": "Login - MFA",
           "_type": {
-            "_id": "PageNode",
-            "name": "Page Node",
+            "_id": "InnerTreeEvaluatorNode",
+            "name": "Inner Tree Evaluator",
             "collection": true
           },
           "_outcomes": [
             {
-              "id": "outcome",
-              "displayName": "Outcome"
+              "id": "true",
+              "displayName": "True"
+            },
+            {
+              "id": "false",
+              "displayName": "False"
             }
           ]
         },
-        "8de1eca9-dbf1-4d05-a9be-6e62f50d11d7": {
-          "_id": "8de1eca9-dbf1-4d05-a9be-6e62f50d11d7",
-          "_rev": "344865435",
+        "a3107dd4-3909-40e5-8f39-0e0112806693": {
+          "_id": "a3107dd4-3909-40e5-8f39-0e0112806693",
+          "_rev": "-504375749",
           "incrementUserAttributeOnFailure": true,
           "retryLimit": 3,
           "_type": {
@@ -618,31 +616,30 @@
             }
           ]
         },
-        "e4b78126-8950-40e0-8dd7-55033cd4da83": {
-          "_id": "e4b78126-8950-40e0-8dd7-55033cd4da83",
-          "_rev": "1418823326",
-          "tree": "Login Demo - MFA",
+        "fd5a2143-2f00-44aa-bf0f-105e0ff44897": {
+          "_id": "fd5a2143-2f00-44aa-bf0f-105e0ff44897",
+          "_rev": "-2101079401",
+          "deviceLocation": false,
+          "maximumSize": "3",
+          "deviceMetadata": true,
+          "message": {},
           "_type": {
-            "_id": "InnerTreeEvaluatorNode",
-            "name": "Inner Tree Evaluator",
+            "_id": "DeviceProfileCollectorNode",
+            "name": "Device Profile Collector",
             "collection": true
           },
           "_outcomes": [
             {
-              "id": "true",
-              "displayName": "True"
-            },
-            {
-              "id": "false",
-              "displayName": "False"
+              "id": "outcome",
+              "displayName": "Outcome"
             }
           ]
         }
       },
       "innerNodes": {
-        "6674a543-5c06-4bda-b521-10f759e427fe": {
-          "_id": "6674a543-5c06-4bda-b521-10f759e427fe",
-          "_rev": "-16270013",
+        "c98b9e90-d0b3-4411-8e43-d34585452ed9": {
+          "_id": "c98b9e90-d0b3-4411-8e43-d34585452ed9",
+          "_rev": "-1274054009",
           "_type": {
             "_id": "UsernameCollectorNode",
             "name": "Username Collector",
@@ -655,9 +652,9 @@
             }
           ]
         },
-        "2a9fe13a-a05a-462e-a0d5-70c2271b446b": {
-          "_id": "2a9fe13a-a05a-462e-a0d5-70c2271b446b",
-          "_rev": "1450558603",
+        "79b8d6f1-fba7-4c6d-9873-86b904600f35": {
+          "_id": "79b8d6f1-fba7-4c6d-9873-86b904600f35",
+          "_rev": "-160524843",
           "_type": {
             "_id": "PasswordCollectorNode",
             "name": "Password Collector",
